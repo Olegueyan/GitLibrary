@@ -1,0 +1,29 @@
+@startuml
+
+class User<<Entity>>
+{
+    - idUser : int {id}
+    - pseudo : str
+    - password : str
+    - email : str
+}
+
+class Library<<Entity>>
+{
+    - refUser : int [FK]
+    - refGame : int [FK]
+    - dateAdded : datetime
+}
+
+class Game<<Entity>>
+{
+    - idGame : int {id}
+    - name : str
+    - description : str
+    - price : double
+}
+
+User -- Library
+Library - Game
+
+@enduml
