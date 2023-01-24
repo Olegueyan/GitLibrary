@@ -10,4 +10,4 @@ $request = "INSERT INTO User (pseudo, password, email) VALUES ('{$pseudo}', '{$p
 
 $connection->query($request);
 
-header("../../Controller/library.php");
+header("location:../../Controller/library.php");
