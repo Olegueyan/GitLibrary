@@ -1,15 +1,17 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-<form action="login.php" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username"><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br>
-    <input type="submit" value="Sign in">
-</form>
-</body>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title><?php echo $title ?></title>
+    </head>
+    <body>
+        <form method="post" action=<?php echo $action ?>>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br>
+            
+            <input type="submit" value="Log In">
+        </form>
+    </body>
 </html>
