@@ -6,7 +6,12 @@
 </head>
 <body>
     <h1><?php echo $title_page ?></h1>
-<a href="login.html">Log In</a>
-<a href="signup.html">Sign Up</a>
+
+    <a href=<?php echo $login_href ?>>Log In</a>
+    <a href=<?php echo $signup_href ?>>Sign Up</a>
+
+    <div>
+
+    </div>
 </body>
 </html>
