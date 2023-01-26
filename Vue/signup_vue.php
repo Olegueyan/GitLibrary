@@ -34,7 +34,7 @@
                 <label class="form-label" for="email">Email</label>
                 <input class="form-control" type="text" id="email" name="email">
             </div>
-            <input class="btn btn-primary" type="submit" value="Sign Up">
+            <input class="btn btn-dark" type="submit" value="Sign Up">
         </form>
     </body>
 </html>
