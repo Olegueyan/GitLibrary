@@ -1,8 +1,8 @@
 <?php
 
-require_once("../Model/Manager/UserManager.php");
+require("../Model/Manager/UserManager.php");
 
 $title = "GitLibrary : Sign Up";
-$action = "sgnup_action.php";
+$action = "signup_action.php";
 
 require_once('../Vue/signup_vue.php');
