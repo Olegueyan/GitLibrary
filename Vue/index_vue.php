@@ -9,5 +9,9 @@
 
     <a href=<?php echo $login_href ?>>Log In</a>
     <a href=<?php echo $signup_href ?>>Sign Up</a>
+
+    <div>
+
+    </div>
 </body>
 </html>

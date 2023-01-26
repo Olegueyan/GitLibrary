@@ -5,10 +5,10 @@
     </head>
     <body>
         <form method="post" action=<?php echo $action ?>>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br>
+            <label for="pseudo">Pseudo =></label>
+            <input type="text" id="pseudo" name="pseudo"><br>
     
-            <label for="password">Password:</label>
+            <label for="password">Password =></label>
             <input type="password" id="password" name="password"><br>
             
             <input type="submit" value="Log In">

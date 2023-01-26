@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>Mange moi !</h1>
+
+    <h3>User Infos</h3>
+
+    <table>
+        <ul><?php echo $id_user_info?></ul>
+        <ul><?php echo $pseudo_info?></ul>
+        <ul><?php echo $email_info?></ul>
+    </table>
 </body>
 </html>
