@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once("../Model/Manager/UserManager.php");
 
 $title = "GitLibrary : Home";
