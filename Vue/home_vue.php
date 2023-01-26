@@ -8,6 +8,7 @@
 
     <title><?php echo $title ?></title>
     <link href="../Controller/CSS/home.css" rel="stylesheet" type="text/css">
+    <link href="../Controller/CSS/global.css" rel="stylesheet" type="text/css">
 
     <!-- Import of Bootstrap -->
     <link href="../Controller/CSS/Bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
@@ -21,9 +22,10 @@
     <!-- Import of Bootstrap -->
 </head>
 <body>
-    <h1><?php echo $title_page ?></h1>
-
-    <a href=<?php echo $login_href ?>>Log In</a>
-    <a href=<?php echo $signup_href ?>>Sign Up</a>
+    <div class="container-fluid" id="container">
+        <h1 class="h1" id="title"><?php echo $title_page ?></h1>
+        <a class="btn btn-dark" id="logBtn" href=<?php echo $login_href ?>>Log In</a>
+        <a class="btn btn-dark" id="signBtn" href=<?php echo $signup_href ?>>Sign Up</a>
+    </div>
 </body>
 </html>

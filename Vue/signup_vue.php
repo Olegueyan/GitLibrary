@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
         <link href="../Controller/CSS/signup.css" rel="stylesheet" type="text/css">
+        <link href="../Controller/CSS/global.css" rel="stylesheet" type="text/css">
 
         <!-- Import of Bootstrap -->
         <link href="../Controller/CSS/Bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
@@ -30,7 +31,7 @@
                 <input class="form-control" type="password" id="password" name="password">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="email">Email =></label>
+                <label class="form-label" for="email">Email</label>
                 <input class="form-control" type="text" id="email" name="email">
             </div>
             <input class="btn btn-primary" type="submit" value="Sign Up">
