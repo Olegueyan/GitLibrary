@@ -1,0 +1,24 @@
+body
+{
+    background: #527799;
+}
+
+#inscription_label
+{
+    color: white;
+    font-size: 30px;
+}
+
+label
+{
+    font-weight: bold;
+}
+
+#form
+{
+    margin-top: 30px;
+    height: 260px;
+    width: 750px;
+    background: linear-gradient(275deg, rgba(34,86,110,1) 0%, rgba(34,134,145,1) 50%, rgba(34,86,110,1) 100%);
+    border-radius: 5px;
+}
