@@ -1,6 +1,6 @@
 <?php
 
-require_once("../Manager/Connect.php");
+require("../Manager/Connect.php");
 
 $pseudo = $_POST['pseudo'];
 $password = hash("sha256", $_POST['password']);
