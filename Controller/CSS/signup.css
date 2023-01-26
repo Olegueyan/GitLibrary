@@ -1,0 +1,19 @@
+#inscription_label
+{
+    color: white;
+    font-size: 30px;
+}
+
+label
+{
+    font-weight: bold;
+}
+
+#form
+{
+    margin-top: 8%;
+    height: 500px;
+    width: 600px;
+    background: #7b7f84;
+    border-radius: 5px;
+}

@@ -1,6 +1,6 @@
 <?php
 
-require_once("../Manager/Connect.php");
+require("../Model/Manager/Connect.php");
 
 $pseudo = $_POST['pseudo'];
 $password = hash("sha256", $_POST['password']);
@@ -10,4 +10,4 @@ $request = "INSERT INTO User (pseudo, password, email) VALUES ('{$pseudo}', '{$p
 
 $connection->query($request);
 
-header("location:../../Controller/library.php");
+header("location:./login.php");
