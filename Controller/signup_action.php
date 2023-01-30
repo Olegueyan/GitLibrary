@@ -1,13 +1,14 @@
 <?php
 
 require("../Model/Manager/Connect.php");
+require("../Model/Manager/UserManager.php");
 
 $pseudo = $_POST['pseudo'];
 $password = hash("sha256", $_POST['password']);
 $email = $_POST['email'];
 
-$request = "INSERT INTO User (pseudo, password, email) VALUES ('{$pseudo}', '{$password}', '{$email}')";
+var_dump($_FILES);
 
-$connection->query($request);
+//create_user_in_database($pseudo, $password, $email, $avatar);
 
-header("location:./login.php");
+//header("location:./login.php");
