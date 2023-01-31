@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $title ?></title>
     <link href="../Controller/CSS/global.css" rel="stylesheet" type="text/css">
+    <link href="../Controller/CSS/library.css" rel="stylesheet" type="text/css">
 
     <!-- Import of Bootstrap -->
     <link href="../Controller/CSS/Bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
@@ -19,17 +20,12 @@
     <!-- Import of Bootstrap -->
 </head>
 <body>
-    <h1>Mange moi !</h1>
-
-    <h3>User Infos</h3>
-
-    <table>
-        <ul><?php echo $id_user_info?></ul>
-        <ul><?php echo $pseudo_info?></ul>
-        <ul><?php echo $email_info?></ul>
-    </table>
-
-    <image class="img-fluid img-thumbnail" src=<?php echo $avatar_user?>>
+    <header>
+        <nav class="nav navbar-dark" id="navbar">
+            <img class="img-fluid img-thumbnail" id="avatar" alt="avatar" src=<?php echo $avatar_user?>>
+            <span id="userTitle"><?php echo $pseudo_info?></span>
+        </nav>
+    </header>
 
     <div class="container-fluid" id="gameLibrary">
         <table class="table table-dark" id="gameTable">

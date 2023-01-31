@@ -6,9 +6,8 @@ require("../Model/Manager/UserManager.php");
 $pseudo = $_POST['pseudo'];
 $password = hash("sha256", $_POST['password']);
 $email = $_POST['email'];
+$avatar = $_FILES['avatar']['tmp_name'];
 
-var_dump($_FILES);
+create_user_in_database($pseudo, $password, $email, $avatar);
 
-//create_user_in_database($pseudo, $password, $email, $avatar);
-
-//header("location:./login.php");
+header("location:./login.php");

@@ -6,7 +6,7 @@ function create_user_in_database(string $user, string $password, string $email, 
 {
     global $connection;
     $request = $connection->prepare("INSERT INTO user (pseudo, password, email, avatar) VALUES (?, ?, ?, ?)");
-    $request->execute(array($user, $password, $email, $avatar));
+    $request->execute(array($user, $password, $email, file_get_contents($avatar)));
 }
 
 function get_all_games() : array

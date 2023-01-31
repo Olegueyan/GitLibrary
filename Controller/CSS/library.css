@@ -1,0 +1,22 @@
+header
+{
+    padding: 20px;
+}
+
+#userTitle
+{
+    color: white;
+    font-weight: bold;
+}
+
+#avatar
+{
+    width: 85px;
+    height: 85px;
+    border-radius: 20px;
+}
+
+#navbar
+{
+    background-color: grey;
+}
