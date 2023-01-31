@@ -12,6 +12,13 @@
 
 <h3>User Infos</h3>
 
+<table>
+    <ul><?php echo $id_user_info?></ul>
+    <ul><?php echo $pseudo_info?></ul>
+    <ul><?php echo $email_info?></ul>
+</table>
+
+
 Nothing Ahah
 
 <h1>Games</h1>
@@ -30,6 +37,22 @@ if(isset($_POST['submit'])) {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    $sql = "SELECT * FROM selected_game";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        echo "<form action='' method='post'>";
+        echo "<table><tr><th>Select</th><th>ID</th><th>Name</th><th>Description</th><th>Price</th></tr>";
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "<tr><td><input type='checkbox' name='selected_games[]' value='" . $row["idUser"] . "'></td><td>" . $row["game"]. "</td><td>" . $row["description"]. "</td><td>" . $row["price"]. "</td></tr>";
+        }
+        echo "</table>";
+        echo "<input type='submit' name='submit' value='Submit'>";
+        echo "</form>";
+    } else {
+        echo "0 results";
+    }
+
     $selected_games_str = implode(',', $selected_games);
     $sql = "SELECT * FROM game WHERE game_id IN ($selected_games_str)";
 
