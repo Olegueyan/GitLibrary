@@ -39,7 +39,7 @@
 
             <?php
                 require_once("../Model/Manager/UserManager.php");
-                foreach (get_game_of($pseudo_info) as $game)
+                foreach (get_game_of((int) $_SESSION["user_info"]["idUser"]) as $game)
                 {?>
                     <tr>
                         <th><?php echo $game[0] ?></th>

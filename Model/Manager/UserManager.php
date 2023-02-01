@@ -20,13 +20,28 @@ function get_all_games() : array
 function add_game_for(int $idUser, int $idGame)
 {
     global $connection;
-    $request = "INSERT INTO library (refUser, refGame, dateAdded) VALUES (?, ?, ?)";
+    $request = $connection->prepare("INSERT INTO library (refUser, refGame, dateAdded) VALUES (?, ?, ?)");
     $request->execute(array($idUser, $idGame, date("Y-m-d H:i:s")));
 }
 
-function get_game_of(string $user)
+function get_game_of(int $idUser) : array
 {
-    return array();
+    global $connection;
+    $request = "SELECT refGame FROM library WHERE refUser='{$idUser}'";
+    $result = mysqli_fetch_all(mysqli_query($connection, $request));
+    if (empty($result))
+    {
+        return array();
+    }
+    else
+    {
+        $ids = implode(',', array_map(function ($item) {
+            return $item[0];
+        }, $result));
+        $request = "SELECT * FROM game WHERE idGame IN ({$ids})";
+        $result = mysqli_query($connection, $request);
+        return mysqli_fetch_all($result);
+    }
 }
 
 function get_user_from_database(string $user, string $password) : array|false|null

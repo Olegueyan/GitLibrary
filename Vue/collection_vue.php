@@ -34,10 +34,11 @@
                <?php
                require_once("../Model/Manager/UserManager.php");
                foreach (get_all_games() as $game)
-               {?>
+               {
+                   ?>
                    <tr>
                        <th><label>
-                               <input class="check" type="checkbox" name="selected_games[]">
+                               <input class="check" type="checkbox" name="selected_games[]" value=<?php echo $game[0] ?>>
                            </label></th>
                        <th><?php echo $game[0] ?></th>
                        <th><?php echo $game[1] ?></th>
