@@ -1,0 +1,29 @@
+header
+{
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#avatar
+{
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+}
+
+#userPseudo
+{
+    color: white;
+    font-weight: bold;
+}
+
+#userEmail
+{
+    color: white;
+    font-weight: bold;
+}
+
+#selectGame
+{
+    padding-top: 100px;
+}

@@ -20,7 +20,7 @@
         <!-- Import of Bootstrap -->
     </head>
     <body>
-        <form class="container" id="form" method="post" action=<?php echo $action ?>>
+        <form class="container" id="form" method="post" enctype="multipart/form-data" action=<?php echo $action ?>>
             <label id="inscription_label">Inscription</label>
             <div class="mb-3">
                 <label class="form-label" for="pseudo">Pseudo</label>
@@ -33,6 +33,10 @@
             <div class="mb-3">
                 <label class="form-label" for="email">Email</label>
                 <input class="form-control" type="text" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="avatar">Avatar</label>
+                <input class="form-control" type="file" id="avatar" name="avatar" accept="image/*">
             </div>
             <input class="btn btn-dark" type="submit" value="Sign Up">
         </form>
