@@ -17,6 +17,18 @@ function get_all_games() : array
     return mysqli_fetch_all($result);
 }
 
+function add_game_for(int $idUser, int $idGame)
+{
+    global $connection;
+    $request = "INSERT INTO library (refUser, refGame, dateAdded) VALUES (?, ?, ?)";
+    $request->execute(array($idUser, $idGame, date("Y-m-d H:i:s")));
+}
+
+function get_game_of(string $user)
+{
+    return array();
+}
+
 function get_user_from_database(string $user, string $password) : array|false|null
 {
     global $connection;
